@@ -1,7 +1,9 @@
 module.exports = function(grunt) {
 	var fs = require('fs'),
 		PACK = grunt.file.readJSON('package.json'),
-		COPYPACK = grunt.file.readJSON('copypack.json'),
+		COPYPACK = {
+			dest: false
+		},
 		path = require('path'),
 		date = new  Date(),
 		year = date.getFullYear(),
@@ -28,6 +30,9 @@ module.exports = function(grunt) {
  */`;
 	require('load-grunt-tasks')(grunt);
 	require('time-grunt')(grunt);
+	if(fs.existsSync('copypack.json')) {
+		COPYPACK = grunt.file.readJSON('copypack.json');
+	}
 
 	grunt.initConfig({
 		globalConfig : {},
@@ -96,7 +101,7 @@ module.exports = function(grunt) {
 						expand: true,
 						cwd: 'assets/plugins',
 						src: ['**/*.*'],
-						dest: COPYPACK.dest,
+						dest: COPYPACK.dest ? COPYPACK.dest : __dirname + "/test/",
 					},
 				],
 			},
@@ -119,7 +124,7 @@ module.exports = function(grunt) {
 		'clean',
 		'string-replace',
 		'pug',
-		//'copy',
+		'copy',
 		'compress'
 	]);
 }
