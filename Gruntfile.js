@@ -73,14 +73,10 @@ module.exports = function(grunt) {
 				options: {
 					doctype: 'html',
 					client: false,
-					pretty: '',
-					separator:  '',
+					pretty: '\t',
+					separator:  '\n',
 					data: function(dest, src) {
-						return {
-							"pagetitle":     PACK.title,
-							"description":   PACK.description,
-							"keywords":      PACK.keywords,
-						}
+						return PACK
 					},
 				},
 				files: [
@@ -109,12 +105,12 @@ module.exports = function(grunt) {
 		compress: {
 			main: {
 				options: {
-					archive: 'DirectoryUtilites.zip',
+					archive: 'DirectoryUtilities.zip',
 				},
 				files: [
 					{
 						src: ['assets/**', 'install/**'],
-						dest: 'DirectoryUtilites/',
+						dest: 'DirectoryUtilities/',
 					},
 				],
 			},

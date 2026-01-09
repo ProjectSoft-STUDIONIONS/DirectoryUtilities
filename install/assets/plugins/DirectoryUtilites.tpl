@@ -1,6 +1,6 @@
 //<?php
 /**
- * DirectoryUtilites
+ * DirectoryUtilities
  *
  * Плагин Evolution CMS для работы с директориями.
  *
@@ -16,11 +16,11 @@
  * @license      https://github.com/ProjectSoft-STUDIONIONS/DirectoryUtilities/blob/master/LICENSE GNU General Public License v3.0 (GPL-3.0)
  * @reportissues https://github.com/ProjectSoft-STUDIONIONS/DirectoryUtilities/issues
  * @author       Чернышёв Андрей aka ProjectSoft <projectsoft2009@yandex.ru>
- * @lastupdate   2026-01-08
+ * @lastupdate   2026-01-09
  */
 
 /**
- * DirectoryUtilites
+ * DirectoryUtilities
  *
  * Плагин Evolution CMS для работы с директориями.
  *
@@ -36,6 +36,6 @@
  * @license      https://github.com/ProjectSoft-STUDIONIONS/DirectoryUtilities/blob/master/LICENSE GNU General Public License v3.0 (GPL-3.0)
  * @reportissues https://github.com/ProjectSoft-STUDIONIONS/DirectoryUtilities/issues
  * @author       Чернышёв Андрей aka ProjectSoft <projectsoft2009@yandex.ru>
- * @lastupdate   2026-01-08
+ * @lastupdate   2026-01-09
  */
 require MODX_BASE_PATH.'assets/plugins/utilites/directory/plugin.DirectoryUtilites.php';

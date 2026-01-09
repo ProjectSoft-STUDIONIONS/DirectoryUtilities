@@ -1,8 +1,121 @@
+doctype html
+- var versions = [ "1.0.0" ];
 html(lang="ru")
 	head
-		title #{pagetitle}
+		title #{title} - Плагин Evolution CMS
+		meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=EmulateIE9")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		meta(name="cmsmagazine" content="d8e7426ec72ad3e4ea38b09ebf01284")
+		meta(charset="utf-8")
+		meta(name="yandex-verification" content="ad6b0f0f478e9f72")
+		meta(name="SKYPE_TOOLBAR" content ="SKYPE_TOOLBAR_PARSER_COMPATIBLE")
+		meta(name="color-scheme" content="only light")
+		meta(name="theme-color" content="#ffffff")
+		meta(name="title" content=`${title} - Плагин Evolution CMS`)
+		meta(name="description" content=`${description}`)
+		meta(name="keywords" content=keywords.toString())
+		meta(name="author" content="ProjectSoft")
+		meta(name="og:url" content="")
+		meta(name="og:type" content="website")
+		meta(name="og:title" content=`${title} - Плагин Evolution CMS`)
+		meta(name="og:description" content=`${description}`)
+		meta(name="twitter:card" content="summary_large_image")
+		link(rel="icon" type="image/png" href="/favicon.png" sizes="256x256")
+		link(rel="shortcut icon" href="/favicon.ico")
+		meta(name="apple-mobile-web-app-title" content=`${title} - Плагин Evolution CMS`)
+		style
+			include ../css/main.css
 	body
-		p
-			|#{description}
-		p
-			|#{keywords}
+		header
+			div
+				a(href="https://projectsoft-studionions.github.io/")
+			div
+				h1
+					|Плагин «#{title}» для Evolution CMS
+				p
+					|Плагин <code>#{title}</code> для Evolution CMS.
+			div
+				a(href=homepage target="_blank")
+					include ../image/github.svg
+		main
+			include ../image/evolution.svg
+			h2
+				|Описание
+			div.description
+				p
+					|Модуль <code>#{title}</code> для Evolution CMS разработан для .
+				p
+					|Установку модуля нужно провести через административную панель <strong>Evolution CMS</strong>.
+				p
+					|Скачать <a href="#last-version">последнюю версию</a> модуля для своей версии <strong>Evolution CMS</strong>.
+				h3
+					|Установка
+				ul
+					li
+						|Войдите в административную панель Evolution.
+					li
+						|Перейдите в модули и запустите модуль Extras.
+					li
+						|Загрузите скачанный файл модуля и установите его.
+					li
+						|Дождитесь завершения установки.
+				h3
+					|Настройка
+				p
+					|Немного о натройках.
+				p.text-center
+					|<strong>Удачного использования модуля!</strong>
+			h2
+				|Версии
+			div.articles
+				article#last-version
+					head
+						h3
+							|Последняя версия
+					div
+						ul
+							li
+								div
+									span
+										|Для Evolution CMS
+									span.text-right
+										a.btn(href=`https://github.com/ProjectSoft-STUDIONIONS/${title}/releases/latest/download/${title}.zip` download=`food-${title}.zip`)
+											|Скачать
+				each version in versions
+					article
+						head
+							h3= version
+						div
+							ul
+								li
+									div
+										span
+											|Для Evolution CMS
+										span.text-right
+											a.btn(href=`https://github.com/ProjectSoft-STUDIONIONS/${title}/releases/download/${version}/${title}.zip` download=`${title}.zip`)
+												|Скачать
+		footer
+			p.text-center
+				|©&nbsp;Copyright 2008&nbsp;–&nbsp;All
+			p.text-center
+				a(href="https://github.com/ProjectSoft-STUDIONIONS" target="_blank")
+					|ProjectSoft
+		script(type="text/javascript")
+			|window.params = {};
+		script(type="text/javascript")
+			|function getIP(json) {
+			|	window.params.addr = json.ip
+			|}
+		script(type="text/javascript" src!="https://api.ipify.org/?format=jsonp&callback=getIP" defer)
+		//- script
+			include ../js/index.js
+		// Yandex.Metrika counter
+		script(type="text/javascript" defer)
+			|setTimeout(() => {
+			|	(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date(); for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }} k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(56381902, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true,ecommerce:"dataLayer",params: {addr: window.params.addr}});
+			|}, 2000);
+		noscript
+			div
+				img(src="https://mc.yandex.ru/watch/56381902" style="position:absolute; left:-9999px;" alt="")
+		// /Yandex.Metrika counter
