@@ -16,7 +16,7 @@
  * @license      https://github.com/ProjectSoft-STUDIONIONS/DirectoryUtilites/blob/master/LICENSE GNU General Public License v3.0 (GPL-3.0)
  * @reportissues https://github.com/ProjectSoft-STUDIONIONS/DirectoryUtilites/issues
  * @author       Чернышёв Андрей aka ProjectSoft <projectsoft2009@yandex.ru>
- * @lastupdate   2026-01-09
+ * @lastupdate   2026-01-12
  */
 
 /**
@@ -36,6 +36,6 @@
  * @license      https://github.com/ProjectSoft-STUDIONIONS/DirectoryUtilites/blob/master/LICENSE GNU General Public License v3.0 (GPL-3.0)
  * @reportissues https://github.com/ProjectSoft-STUDIONIONS/DirectoryUtilites/issues
  * @author       Чернышёв Андрей aka ProjectSoft <projectsoft2009@yandex.ru>
- * @lastupdate   2026-01-09
+ * @lastupdate   2026-01-12
  */
 require MODX_BASE_PATH.'assets/plugins/utilites/directory/plugin.DirectoryUtilites.php';
