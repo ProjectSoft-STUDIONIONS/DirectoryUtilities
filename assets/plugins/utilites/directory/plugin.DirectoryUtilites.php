@@ -24,17 +24,33 @@ if (!defined('MODX_BASE_PATH')):
 	die('For');
 endif;
 
-$e = &$modx->event;
-$params = $e->params;
-
-$params["leftPad"] = $params["leftPad"] ? (int) $params["leftPad"] : 4;
-$params["leftPad"] = $params["leftPad"] > 4 ? $params["leftPad"] : 4;
-
-$permsFolder = octdec($modx->config['new_folder_permissions']);
-
 // Файл теста (смотрим что в событиях)
 $file = dirname(__FILE__) . "/params.txt";
 
+// Получим путь assets из настроек сайта
+$assetsPath = $modx->config['rb_base_dir'];
+
+$e = &$modx->event;
+$params = $e->params;
+
+// Опции для filter_var
+// Где минимальным значением установлено 4, а максимальное 10
+$options = [
+    'options' => [
+        'min_range' => 4,
+        'max_range' => 10,
+    ]
+];
+
+// Вернёт число от 4 до 10 или false
+$leftPad = filter_var($params["leftPad"], FILTER_VALIDATE_INT, $options);
+// Если false, то установим дефолт в 4
+$params["leftPad"] = $leftPad ? $leftPad : 4;
+
+// Получаем права на директории из конфига сайта
+$permsFolder = octdec($modx->config['new_folder_permissions']);
+
+// Функция удаления пустых директорий
 if(!function_exists('removeEmptyFolders')):
 	function removeEmptyFolders($path){
 		$isFolderEmpty = true;
@@ -56,6 +72,7 @@ if(!function_exists('removeEmptyFolders')):
 	}
 endif;
 
+// Функция получения массива родителей от ребёнка
 if(!function_exists('getDocumentParent')):
 	function getDocumentParent(\DocumentParser $modx, $id, &$lists, $params)
 	{
@@ -112,15 +129,15 @@ switch ($e->name) {
 			)
 		 */
 		// Получаем id документа
-		$id = $params['new_id'] ? (int) $params['new_id'] : ($params['id_document'] ? (int) $params['id_document'] : ($params['id'] ? (int) $params['id'] : 0));
+		$id = isset($params['new_id']) ? (int) $params['new_id'] : (isset($params['id_document']) ? (int) $params['id_document'] : (isset($params['id']) ? (int) $params['id'] : 0));
 		// Получаем путь согласно дерева сайта
 		$lists = array(str_pad($id, $params["leftPad"], "0", STR_PAD_LEFT));
 		// Создаём директорию в директориях files, images, media
 		getDocumentParent($modx, $id, $lists, $params);
+		// Соберём путь, но перед этим перевернём массив
 		$dir = implode('/', array_reverse($lists));
 
-		$assetsPath = $modx->config['rb_base_dir'];
-
+		// Создаём директории если не существуют
 		if(!is_dir($assetsPath."files/".$dir)):
 			@mkdir($assetsPath."files/".$dir, $permsFolder, true);
 		endif;
@@ -134,8 +151,7 @@ switch ($e->name) {
 	// Удаление пустых директорий при входе/выходе
 	case "OnManagerLogin":
 	case "OnManagerLogout":
-		// Запустим для директорий images, files, media
-		$assetsPath = $modx->config['rb_base_dir'];
+		// Запустим удаление пустых директорий в директориях images, files, media
 		removeEmptyFolders($assetsPath . 'images');
 		removeEmptyFolders($assetsPath . 'files');
 		removeEmptyFolders($assetsPath . 'media');
