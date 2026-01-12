@@ -14,7 +14,7 @@
 
 + Скачать [последнюю версию плагина](https://github.com/ProjectSoft-STUDIONIONS/DirectoryUtilites/releases/latest/download/DirectoryUtilites.zip) для Evolution CMS.
 + Войдите в административную панель Evolution.
-+ Перейдите в модули и запустите модуль Extras.
++ Перейдите в модули и запустите модуль `Extras`.
 + Загрузите скачанный файл плагина и установите его.
 + Дождитесь завершения установки.
 
