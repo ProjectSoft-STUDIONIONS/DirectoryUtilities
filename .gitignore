@@ -5,3 +5,4 @@ tests
 *.zip
 *.sublime-workspace
 copypack.json
+docs/*.html
