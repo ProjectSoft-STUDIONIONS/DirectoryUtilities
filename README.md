@@ -24,3 +24,4 @@
 
 ### Скриншот
 
+![Плагин DirectoryUtilites для Evolution CMS](docs/assets/images/screen.png "Плагин DirectoryUtilites для Evolution CMS")
