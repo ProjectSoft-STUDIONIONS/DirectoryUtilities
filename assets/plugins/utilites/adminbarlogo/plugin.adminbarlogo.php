@@ -35,8 +35,8 @@ switch ($e->name) {
 			'noImage' => 'assets/plugins/utilites/adminbarlogo/noimage-logotip.png'
 		));
 
-		$out = $logotip;
-		$out .= <<<EOT
+		//$out = $logotip;
+		$out = <<<EOT
 <style id="adminBarLogo-style">
 @media (min-width: 1200px) {
 	body.light #mainMenu #nav #site::before,
