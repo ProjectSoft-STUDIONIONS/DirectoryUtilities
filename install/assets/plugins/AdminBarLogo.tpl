@@ -9,7 +9,7 @@
  * @package      evo
  * @internal     @events OnManagerMenuPrerender
  * @internal     @modx_category Utilites
- * @internal     @properties &logotip=Логотип в Админ Панели;text;assets/plugins/utilites/adminbarlogo/noimage-logotip.png;assets/plugins/utilites/adminbarlogo/noimage-logotip.png;К логотипу будет применён ресайз до размера 140x40
+ * @internal     @properties &logotip=Логотип в Админ Панели;text;assets/plugins/utilites/adminbarlogo/noimage-logotip.svg;assets/plugins/utilites/adminbarlogo/noimage-logotip.svg;К логотипу будет применён ресайз до размера 140x40
  * @internal     @installset base
  * @internal     @disabled 0
  * @homepage     https://github.com/ProjectSoft-STUDIONIONS/DirectoryUtilites#readme
@@ -29,7 +29,7 @@
  * @package      evo
  * @internal     @events OnManagerMenuPrerender
  * @internal     @modx_category Utilites
- * @internal     @properties &logotip=Логотип в Админ Панели;text;assets/plugins/utilites/adminbarlogo/noimage-logotip.png;assets/plugins/utilites/adminbarlogo/noimage-logotip.png;К логотипу будет применён ресайз до размера 140x40
+ * @internal     @properties &logotip=Логотип в Админ Панели;text;assets/plugins/utilites/adminbarlogo/noimage-logotip.svg;assets/plugins/utilites/adminbarlogo/noimage-logotip.svg;К логотипу будет применён ресайз до размера 140x40
  * @internal     @installset base
  * @internal     @disabled 0
  * @homepage     https://github.com/ProjectSoft-STUDIONIONS/DirectoryUtilites#readme
