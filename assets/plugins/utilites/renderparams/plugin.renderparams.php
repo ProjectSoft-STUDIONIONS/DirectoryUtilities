@@ -5,7 +5,7 @@
  * Рендер параметров модуля, снипета, плагина
  *
  * @category     plugin
- * @version      2.1.1
+ * @version      2.1.2
  * @package      evo
  * @internal     @events OnPluginFormPrerender,OnSnipFormPrerender,OnModFormPrerender
  * @internal     @modx_category Utilites

@@ -5,7 +5,7 @@
  * Закрепление Блока инструментов TinyMCE.
  *
  * @category     plugin
- * @version      2.1.1
+ * @version      2.1.2
  * @package      evo
  * @internal     @events OnRichTextEditorInit
  * @internal     @modx_category Utilites
@@ -24,7 +24,7 @@
  * Закрепление Блока инструментов TinyMCE.
  *
  * @category     plugin
- * @version      2.1.1
+ * @version      2.1.2
  * @package      evo
  * @internal     @events OnRichTextEditorInit
  * @internal     @modx_category Utilites

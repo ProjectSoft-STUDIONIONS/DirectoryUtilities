@@ -5,7 +5,7 @@
  * Добавление класса к body для починки отображения трея.
  *
  * @category     plugin
- * @version      2.1.1
+ * @version      2.1.2
  * @package      evo
  * @internal     @events OnManagerTreeInit
  * @internal     @modx_category Utilites

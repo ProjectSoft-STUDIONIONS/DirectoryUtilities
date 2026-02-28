@@ -5,7 +5,7 @@
  * Плагин Evolution CMS для работы с директориями.
  *
  * @category     plugin
- * @version      2.1.1
+ * @version      2.1.2
  * @package      evo
  * @internal     @events OnManagerLogin,OnManagerLogout,OnDocFormRender,onAfterMoveDocument,OnDocFormSave,OnDocDuplicate
  * @internal     @modx_category Utilites
