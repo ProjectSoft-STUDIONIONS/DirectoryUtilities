@@ -50,6 +50,6 @@ jobs:
           # Upload entire repository
           path: './docs/'
 
-      - name: Развертывание на странице GitHub - https://projectsoft-studionions.github.io/DirectoryUtilites/
+      - name: Развертывание на странице GitHub - https://projectsoft-studionions.github.io/EvolutionCMS-Utilites/
         id: deployment
         uses: actions/deploy-pages@v4
