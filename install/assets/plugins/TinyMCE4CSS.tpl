@@ -15,7 +15,7 @@
  * @license      https://github.com/ProjectSoft-STUDIONIONS/EvolutionCMS-Utilites/blob/master/LICENSE GNU General Public License v3.0 (GPL-3.0)
  * @reportissues https://github.com/ProjectSoft-STUDIONIONS/EvolutionCMS-Utilites/issues
  * @author       Чернышёв Андрей aka ProjectSoft <projectsoft2009@yandex.ru>
- * @lastupdate   2026-03-01
+ * @lastupdate   2026-03-02
  */
 
 /**
@@ -34,6 +34,6 @@
  * @license      https://github.com/ProjectSoft-STUDIONIONS/EvolutionCMS-Utilites/blob/master/LICENSE GNU General Public License v3.0 (GPL-3.0)
  * @reportissues https://github.com/ProjectSoft-STUDIONIONS/EvolutionCMS-Utilites/issues
  * @author       Чернышёв Андрей aka ProjectSoft <projectsoft2009@yandex.ru>
- * @lastupdate   2026-03-01
+ * @lastupdate   2026-03-02
  */
 require MODX_BASE_PATH.'assets/plugins/utilites/tinymce4css/plugin.tinymce4css.php';
